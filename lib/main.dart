@@ -26,9 +26,14 @@ class MyApp extends StatelessWidget {
             elevation: 0,
           ),
           textTheme: TextTheme(
-            headlineLarge: GoogleFonts.aBeeZee(
+            headlineMedium: TextStyle(
+              fontSize: 28.sp,
+              color: kSecondaryColor,
+              fontWeight: FontWeight.w500,
+            ),
+            headlineLarge: TextStyle(
               fontSize: 24.sp,
-              fontWeight: FontWeight.w900,
+              fontWeight: FontWeight.w800,
               color: kTextColor,
             ),
             titleSmall: GoogleFonts.poppins(
