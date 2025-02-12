@@ -22,23 +22,75 @@ class MyApp extends StatelessWidget {
           primaryColor: kPrimaryColor,
           scaffoldBackgroundColor: kScaffoldColor,
           appBarTheme: AppBarTheme(
-            backgroundColor: kScaffoldColor,
-            elevation: 0,
-          ),
+              toolbarHeight: 7.h,
+              backgroundColor: kScaffoldColor,
+              elevation: 0,
+              iconTheme: IconThemeData(
+                color: kSecondaryColor,
+                size: 20.sp,
+              ),
+              titleTextStyle: GoogleFonts.mulish(
+                color: kTextColor,
+                fontWeight: FontWeight.w800,
+                fontStyle: FontStyle.normal,
+                fontSize: 16.sp,
+              )),
           textTheme: TextTheme(
-            headlineMedium: TextStyle(
+            // headline3
+            displaySmall: TextStyle(
               fontSize: 28.sp,
               color: kSecondaryColor,
               fontWeight: FontWeight.w500,
             ),
-            headlineLarge: TextStyle(
+            // headline4
+            headlineMedium: TextStyle(
               fontSize: 24.sp,
               fontWeight: FontWeight.w800,
               color: kTextColor,
             ),
+            // subTitle2
             titleSmall: GoogleFonts.poppins(
               color: kTextColor,
               fontSize: 12.sp,
+            ),
+            bodySmall: GoogleFonts.poppins(
+              fontSize: 9.sp,
+              fontWeight: FontWeight.w500,
+              color: kPrimaryColor,
+            ),
+            labelMedium: TextStyle(
+              fontSize: 10.sp,
+              fontWeight: FontWeight.w500,
+              color: kTextColor,
+            ),
+          ),
+          inputDecorationTheme: const InputDecorationTheme(
+            enabledBorder: UnderlineInputBorder(
+              borderSide: BorderSide(
+                color: kTextLightColor,
+                width: 0.7,
+              ),
+            ),
+            border: UnderlineInputBorder(
+              borderSide: BorderSide(color: kTextLightColor),
+            ),
+            focusedBorder: UnderlineInputBorder(
+              borderSide: BorderSide(color: kPrimaryColor),
+            ),
+          ),
+          // Lets customize the timePicker theme
+          timePickerTheme: TimePickerThemeData(
+            backgroundColor: kScaffoldColor,
+            // hourMinuteColor: kTextColor,
+            // hourMinuteTextColor: kScaffoldColor,
+            // dayPeriodColor: kTextColor,
+            // dayPeriodTextColor: kScaffoldColor,
+            // dialBackgroundColor: kTextColor,
+            dialHandColor: kPrimaryColor,
+            // dialTextColor: kScaffoldColor,
+            entryModeIconColor: kOtherColor,
+            dayPeriodTextStyle: GoogleFonts.aBeeZee(
+              fontSize: 10.sp,
             ),
           ),
         ),

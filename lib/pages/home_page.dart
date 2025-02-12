@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:medicine_reminder/constants.dart';
+import 'package:medicine_reminder/pages/new_entry/new_entry_page.dart';
 import 'package:sizer/sizer.dart';
 
 class HomePage extends StatelessWidget {
@@ -26,9 +27,15 @@ class HomePage extends StatelessWidget {
       floatingActionButton: InkResponse(
         onTap: () {
           // Go to new entry page
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const NewEntryPage(),
+            ),
+          );
         },
         child: SizedBox(
-          width: 18.h,
+          width: 18.w,
           height: 9.h,
           child: Card(
             color: kPrimaryColor,
@@ -63,7 +70,7 @@ class TopContainer extends StatelessWidget {
           child: Text(
             "Worry less.\nLive healthier",
             textAlign: TextAlign.start,
-            style: Theme.of(context).textTheme.headlineLarge,
+            style: Theme.of(context).textTheme.headlineMedium, //headline4
           ),
         ),
         Container(
@@ -73,7 +80,7 @@ class TopContainer extends StatelessWidget {
           ),
           child: Text(
             "Welcome to Daily Dose.",
-            style: Theme.of(context).textTheme.titleSmall,
+            style: Theme.of(context).textTheme.titleSmall, //subtitle2
           ),
         ),
         SizedBox(
@@ -86,7 +93,7 @@ class TopContainer extends StatelessWidget {
           ),
           child: Text(
             '0',
-            style: Theme.of(context).textTheme.headlineLarge,
+            style: Theme.of(context).textTheme.headlineMedium, //headline4
           ),
         ),
       ],
@@ -103,7 +110,7 @@ class BottomContainer extends StatelessWidget {
       child: Text(
         'No Medicine',
         textAlign: TextAlign.center,
-        style: Theme.of(context).textTheme.headlineMedium,
+        style: Theme.of(context).textTheme.displaySmall, //headline6
       ),
     );
   }
